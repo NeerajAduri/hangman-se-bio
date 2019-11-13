@@ -6,8 +6,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>Hangman</h1>
-      <h2>Vanilla JavaScript Hangman Game</h2>
+      <h1>Guess Up</h1>
       <p>
         Use the alphabet below to guess the word, or click hint to get a clue.
       </p>
@@ -20,8 +19,12 @@
       <p id="clue">Clue -</p>
       <canvas id="stickman"
         >This Text will show if the Browser does NOT support HTML5 Canvas
-        tag</canvas
-      >
+        tag</canvas>
+
+      <div id="imagetoguess">
+          <img id="imageguess" src="assets/mitochondria.jpg">
+      </div>
+
       <div class="container">
         <button id="hint">Hint</button>
         <button id="reset">Play again</button>

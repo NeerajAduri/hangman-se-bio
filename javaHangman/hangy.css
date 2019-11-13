@@ -1,7 +1,18 @@
 /* Variabes */
 /* Mixin's */
+#imagetoguess{
+  width: 250px;
+  height: 250px;
+  display: block;
+  margin: 0 auto;
+}
+#imageguess{
+  width: inherit;
+  height: inherit;
+}
+
 body {
-  background: #c1d72e;
+  background: #2ea7d7;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #fff;
   height: 100%;
