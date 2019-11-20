@@ -38,11 +38,15 @@ window.onload = function() {
   var counter; // Count correct geusses
   var space; // Number of spaces in word '-'
 
+  var imglist; // Array of images
+
   // Get elements
   var showLives = document.getElementById("mylives");
   var showCatagory = document.getElementById("scatagory");
   var getHint = document.getElementById("hint");
   var showClue = document.getElementById("clue");
+
+  var image = document.getElementById("imageguess");
 
   // create alphabet ul
   var buttons = function() {
@@ -64,11 +68,11 @@ window.onload = function() {
   var selectCat = function() {
     if (chosenCategory === categories[0]) {
       catagoryName.innerHTML =
-        "The Chosen Category Is Premier League Football Teams";
+        "The Chosen Category Is a MNP start thing";
     } else if (chosenCategory === categories[1]) {
-      catagoryName.innerHTML = "The Chosen Category Is Films";
+      catagoryName.innerHTML = "The Chosen Category Is AV start thing";
     } else if (chosenCategory === categories[2]) {
-      catagoryName.innerHTML = "The Chosen Category Is Cities";
+      catagoryName.innerHTML = "The Chosen Category Is AP start thing";
     }
   };
 
@@ -159,7 +163,7 @@ window.onload = function() {
   rightArm = function() {
     draw(60, 46, 100, 50);
   };
-
+ko066t5
   leftArm = function() {
     draw(60, 46, 20, 50);
   };
@@ -212,20 +216,30 @@ window.onload = function() {
   play = function() {
     categories = [
       [
-        "everton",
-        "liverpool",
-        "swansea",
-        "chelsea",
-        "hull",
-        "manchester-city",
-        "newcastle-united"
+        "mitochondria",
+        "nucleus",
+        "plant-cell",
+        "nucleus",
+        "mitochondria",
+        "plant-cell",
+        "plant-cell"
       ],
-      ["alien", "dirty-harry", "gladiator", "finding-nemo", "jaws"],
-      ["manchester", "milan", "madrid", "amsterdam", "prague"]
+      ["animal-cell", "virus", "animal-cell", "virus", "animal-cell"],
+      ["amoeba", "paramecium", "amoeba", "paramecium", "amoeba"]
     ];
 
-    chosenCategory = categories[Math.floor(Math.random() * categories.length)];
-    word = chosenCategory[Math.floor(Math.random() * chosenCategory.length)];
+    imglist = [["mitochondria","nucleus","plantcell","nucleus","mitochondria","plantcell","plantcell"],
+              ["animal","virus","animal","virus","animal"],
+              ["amoeba","paramecium","amoeba","paramecium","amoeba"]];
+    
+    
+    var a = Math.floor(Math.random() * categories.length);
+    chosenCategory = categories[a];
+    var b = Math.floor(Math.random() * chosenCategory.length);
+    word = chosenCategory[b];
+    
+    image.src = "assets/"+ imglist[a][b] + ".jpg";
+
     word = word.replace(/\s/g, "-");
     console.log(word);
     buttons();
@@ -245,31 +259,9 @@ window.onload = function() {
   // Hint
 
   hint.onclick = function() {
-    hints = [
-      [
-        "Based in Mersyside",
-        "Based in Mersyside",
-        "First Welsh team to reach the Premier Leauge",
-        "Owned by A russian Billionaire",
-        "Once managed by Phil Brown",
-        "2013 FA Cup runners up",
-        "Gazza's first club"
-      ],
-      [
-        "Science-Fiction horror film",
-        "1971 American action film",
-        "Historical drama",
-        "Anamated Fish",
-        "Giant great white shark"
-      ],
-      [
-        "Northern city in the UK",
-        "Home of AC and Inter",
-        "Spanish capital",
-        "Netherlands capital",
-        "Czech Republic capital"
-      ]
-    ];
+    hints = [["mitochondria","nucleus","plantcell","nucleus","mitochondria","plantcell","plantcell"],
+    ["animal","virus","animal","virus","animal"],
+    ["amoeba","paramecium","amoeba","paramecium","amoeba"]];
 
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
