@@ -67,8 +67,7 @@ window.onload = function() {
   // Select Catagory
   var selectCat = function() {
     if (chosenCategory === categories[0]) {
-      catagoryName.innerHTML =
-        "The Chosen Category Is a MNP start thing";
+      catagoryName.innerHTML = "The Chosen Category Is a MNP start thing";
     } else if (chosenCategory === categories[1]) {
       catagoryName.innerHTML = "The Chosen Category Is AV start thing";
     } else if (chosenCategory === categories[2]) {
@@ -163,7 +162,6 @@ window.onload = function() {
   rightArm = function() {
     draw(60, 46, 100, 50);
   };
-ko066t5
   leftArm = function() {
     draw(60, 46, 20, 50);
   };
@@ -228,17 +226,26 @@ ko066t5
       ["amoeba", "paramecium", "amoeba", "paramecium", "amoeba"]
     ];
 
-    imglist = [["mitochondria","nucleus","plantcell","nucleus","mitochondria","plantcell","plantcell"],
-              ["animal","virus","animal","virus","animal"],
-              ["amoeba","paramecium","amoeba","paramecium","amoeba"]];
-    
-    
+    imglist = [
+      [
+        "mitochondria",
+        "nucleus",
+        "plantcell",
+        "nucleus",
+        "mitochondria",
+        "plantcell",
+        "plantcell"
+      ],
+      ["animal", "virus", "animal", "virus", "animal"],
+      ["amoeba", "paramecium", "amoeba", "paramecium", "amoeba"]
+    ];
+
     var a = Math.floor(Math.random() * categories.length);
     chosenCategory = categories[a];
     var b = Math.floor(Math.random() * chosenCategory.length);
     word = chosenCategory[b];
-    
-    image.src = "assets/"+ imglist[a][b] + ".jpg";
+
+    image.src = "assets/" + imglist[a][b] + ".jpg";
 
     word = word.replace(/\s/g, "-");
     console.log(word);
@@ -259,9 +266,19 @@ ko066t5
   // Hint
 
   hint.onclick = function() {
-    hints = [["mitochondria","nucleus","plantcell","nucleus","mitochondria","plantcell","plantcell"],
-    ["animal","virus","animal","virus","animal"],
-    ["amoeba","paramecium","amoeba","paramecium","amoeba"]];
+    hints = [
+      [
+        "mitochondria",
+        "nucleus",
+        "plantcell",
+        "nucleus",
+        "mitochondria",
+        "plantcell",
+        "plantcell"
+      ],
+      ["animal", "virus", "animal", "virus", "animal"],
+      ["amoeba", "paramecium", "amoeba", "paramecium", "amoeba"]
+    ];
 
     var catagoryIndex = categories.indexOf(chosenCategory);
     var hintIndex = chosenCategory.indexOf(word);
