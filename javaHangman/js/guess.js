@@ -67,11 +67,11 @@ window.onload = function() {
   // Select Catagory
   var selectCat = function() {
     if (chosenCategory === categories[0]) {
-      catagoryName.innerHTML = "The Chosen Category Is a MNP start thing";
+      catagoryName.innerHTML = "The Chosen Category Is a Plant Category";
     } else if (chosenCategory === categories[1]) {
-      catagoryName.innerHTML = "The Chosen Category Is AV start thing";
+      catagoryName.innerHTML = "The Chosen Category Is a Animal or Virus";
     } else if (chosenCategory === categories[2]) {
-      catagoryName.innerHTML = "The Chosen Category Is AP start thing";
+      catagoryName.innerHTML = "The Chosen Category Is Unicellular";
     }
   };
 
@@ -268,16 +268,18 @@ window.onload = function() {
   hint.onclick = function() {
     hints = [
       [
-        "mitochondria",
-        "nucleus",
-        "plantcell",
-        "nucleus",
-        "mitochondria",
-        "plantcell",
-        "plantcell"
+        "Power house of the cell",
+        "Brain of a cell",
+        "Basic unit of life in organisms of the kingdom plantae",
+        "Brain of a cell",
+        "Power house of the cell",
+        "Basic unit of life in organisms of the kingdom plantae",
+        "Basic unit of life in organisms of the kingdom plantae"
       ],
-      ["animal", "virus", "animal", "virus", "animal"],
-      ["amoeba", "paramecium", "amoeba", "paramecium", "amoeba"]
+      ["Basic unit of life in organisms of the kingdom animalia", "Infects a host cell", "Basic unit of life in organisms of the kingdom animalia",
+       "Infects a host cell", "Basic unit of life in organisms of the kingdom animalia"],
+      ["unicellular organism which has the ability to alter its shape", "genus of unicellular ciliates, commonly studied as a representative of the ciliate group", 
+      "unicellular organism which has the ability to alter its shape", "genus of unicellular ciliates, commonly studied as a representative of the ciliate group", "unicellular organism which has the ability to alter its shape"]
     ];
 
     var catagoryIndex = categories.indexOf(chosenCategory);
